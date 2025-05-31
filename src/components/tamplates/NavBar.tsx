@@ -1,18 +1,13 @@
 import React, { useEffect, useState } from "react";
 import {
   Menubar,
-  MenubarContent,
-  MenubarItem,
   MenubarMenu,
-  MenubarSeparator,
-  MenubarShortcut,
   MenubarTrigger,
 } from "@/components/ui/menubar";
 import { useLocation } from "react-router-dom";
 import {
   Code,
   Home,
-  Projector,
   Waypoints,
   MessageSquareMore,
 } from "lucide-react";
@@ -45,8 +40,8 @@ export default function NavBar() {
   const location = useLocation();
   const [scrolled, setScrolled] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
-  const [activeHash, setActiveHash] = useState<string>(window.location.hash);
   const [activeSection, setActiveSection] = useState<string>("");
+  // const [activeHash, setActiveHash] = useState<string>(window.location.hash);
 
   useEffect(() => {
     const sections = icons.map((icon) =>
@@ -56,9 +51,7 @@ export default function NavBar() {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          console.log("entry", entry);
           if (entry.isIntersecting) {
-            console.log(entry.target.id);
             setActiveSection(`#${entry.target.id}`);
           }
         });
@@ -79,17 +72,6 @@ export default function NavBar() {
       });
     };
   }, [icons]);
-
-  // useEffect(() => {
-  //   const handleHashChange = () => {
-  //     setActiveHash(window.location.hash);
-  //   };
-
-  //   window.addEventListener("hashchange", handleHashChange);
-  //   return () => {
-  //     window.removeEventListener("hashchange", handleHashChange);
-  //   };
-  // }, []);
 
   useEffect(() => {
     const handleScroll = () => {
