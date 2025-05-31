@@ -1,15 +1,7 @@
 import React from "react";
 
 import { Dock, DockIcon } from "@/components/magicui/dock";
-import { Button } from "../ui/button";
-import { Link } from "react-router";
-import {
-  Code,
-  Home,
-  Projector,
-  Waypoints,
-  MessageSquareMore,
-} from "lucide-react";
+import { Code, Home, Waypoints, MessageSquareMore } from "lucide-react";
 
 export type IconProps = React.HTMLAttributes<SVGElement>;
 

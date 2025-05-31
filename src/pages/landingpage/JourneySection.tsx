@@ -4,7 +4,6 @@ import {
   CardFooter,
   CardHeader,
 } from "@/components/ui/card";
-import React from "react";
 import { Pengalaman } from "@/lib/dataDummy";
 
 export default function JourneySection() {

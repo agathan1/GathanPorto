@@ -5,12 +5,9 @@ import {
   CardFooter,
   CardHeader,
 } from "@/components/ui/card";
-import MyPic from "../../assets/MePicture.jpg";
-import React from "react";
 import { ProjectDatas } from "../../lib/ProjectDatas";
 import { ArrowUpRight } from "lucide-react";
 import { Lens } from "@/components/magicui/lens";
-import { Link } from "react-router";
 
 interface Props {
   description?: string;

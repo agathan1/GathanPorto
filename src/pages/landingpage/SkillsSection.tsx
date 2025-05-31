@@ -1,10 +1,6 @@
-import React from "react";
 import Marquee from "react-fast-marquee";
 import { CodeXml } from "lucide-react";
-import { LogosReactQuery, ReactIcon } from "@/components/icons";
 import { Skill } from "@/lib/dataDummy";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
 
 export default function SkillsSection() {
   console.log("skill", Skill);

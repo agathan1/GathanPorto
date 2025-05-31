@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import { useForm, ValidationError } from "@formspree/react";
 import { Card } from "../ui/card";
 import { Label } from "@/components/ui/label";

@@ -1,5 +1,4 @@
 import {ReactIcon} from "@/components/icons/"
-import React from "react";
 
 
 export  const TechStack = [

@@ -1,17 +1,9 @@
 import CardProfile from "@/components/tamplates/CardProfile";
-import { ScrollArea } from "@/components/ui/scroll-area";
-import React from "react";
 import ContactSection from "./ContactSection";
 import SkillsSection from "./SkillsSection";
 import JourneySection from "./JourneySection";
 import ProjectSection from "./ProjectSection";
 import { motion } from "framer-motion";
-// import Icon from "@/components/atoms/Icon";
-// import { ReactQueryIcon, ReactIcon } from "@/components/icons";
-// import { TechStack } from "@/lib/TechStack";
-// import { Badge } from "@/components/ui/badge";
-// import { BotnavTrial } from "@/components/tamplates/BotnavTrial";
-
 
 function LandingPage() {
   return (
