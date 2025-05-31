@@ -4,7 +4,6 @@ import { Card } from "../ui/card";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Button } from "../ui/button";
-import {TsIcon} from "@/components/icons"
 
 interface FormInput {
   [key: string]: string;
@@ -13,11 +12,11 @@ interface FormInput {
   message: string
 }
 export default function FormContact() {
-  const [isForm, setIsForm] = useState<FormInput>({
-    email: "",
-    username: "",
-    message: "",
-  });
+  // const [isForm, setIsForm] = useState<FormInput>({
+  //   email: "",
+  //   username: "",
+  //   message: "",
+  // });
     const [state, handleSubmit] = useForm("xblovaek");
 
   // console.log("form contact", formContact);

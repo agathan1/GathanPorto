@@ -1,16 +1,12 @@
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Github, Instagram, Linkedin } from "lucide-react";
-import GithubIcon from "@/components/icons/GithubIcon";
-import React, { useEffect } from "react";
-import MailForm from "@/components/tamplates/MailForm";
+import React from "react";
 import { contact } from "@/lib/dataDummy";
-import { Link } from "react-router";
 import FormContact from "@/components/tamplates/FormContact";
 
 const colorClasses = {
-  white: {
+  black: {
     bg: "bg-transparent",
     text: "text-black",
     border: "border-black",
@@ -37,7 +33,7 @@ interface CardContentProps {
   header: string;
   main: string;
   button: string;
-  icon: React.ReactElement;
+  icon?: React.ReactElement;
   link?: string;
   // icon: string;
   color?: keyof typeof colorClasses;
@@ -51,7 +47,7 @@ export const CardContent = ({
   icon,
   link,
 }: CardContentProps) => {
-  const styles = colorClasses[color];
+  const styles = colorClasses[color ?? "black"];
   return (
     <Card
       className={`flex flex-row justify-between gap-4 p-8 font-poppins  ${styles.bg} border-2 ${styles.border}  shadow-[6px_6px_0px_#000] hover:translate-x-[1px] hover:translate-y-[1px] duration-150 hover:shadow-none  rounded-none`}
@@ -93,7 +89,7 @@ export default function ContactSection() {
       <section className="space-y-8">
         <div className="grid grid-cols-2 max-md:grid-cols-1 mt-8 gap-8">
           {contact.map((item, index) => {
-            let color: "black" | "purple-300/50" | "blue-300/10" = "white";
+            let color: "black" | "purple-300/50" | "blue-300/10"
 
             if (item.name === "Instagram") color = "purple-300/50";
             else if (item.name === "LinkedIn") color = "blue-300/10";
