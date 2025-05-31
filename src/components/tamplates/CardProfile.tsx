@@ -9,9 +9,8 @@ import {
 } from "../ui/card";
 import { Button } from "../ui/button";
 import CardPicture from "../moleculs/CardPicture";
-import Me from "../../assets/MePicture.jpg"
-import { Mail, MapPin  } from 'lucide-react';
-
+import Me from "../../assets/MePicture.jpg";
+import { Mail, MapPin } from "lucide-react";
 
 export default function CardProfile() {
   return (
@@ -30,30 +29,30 @@ export default function CardProfile() {
             <CardPicture />
           </div> */}
             </div>
-            <section className="min-md:z-10 min-md:relative min-md:bottom-8 mt-8">
+            <section className="min-md:z-10 min-md:relative min-md:bottom-8 min-md:mt-8">
               <CardDescription className="text-xl font-semibold font-poppins max-[650px]:text-left">
                 Front-End Developer
               </CardDescription>
               <div className="flex max-md:flex-col space-x-6 space-y-2 mt-2 max-[650px]:text-left max-md:mb-2">
                 <CardDescription className="text-[12px] font-semibold font-poppins flex gap-2">
-                  <MapPin className="size-4"/>
+                  <MapPin className="size-4" />
                   Jakarta Timur, DKI JAKARTA, INDONESIA
                 </CardDescription>
                 <CardDescription className="text-[12px] font-semibold font-poppins flex gap-2">
-                  <Mail className="size-4"/>
+                  <Mail className="size-4" />
                   agathantahtawia@gmail.com
                 </CardDescription>
               </div>
             </section>
           </CardHeader>
-          <CardContent className="p-0 max-md:text-sm min-[650px]:w-[70%] font-semibold font-poppins max-[650px]:text-left ">
+          <CardContent className="p-0 max-md:text-sm min-md:w-[70%] font-semibold font-poppins max-md:text-left ">
             <section className="max-md:text-[12px] mb-4">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos
               maiores molestiae, quia ducimus placeat minus quasi eligendi
               laborum atque iure?
             </section>
           </CardContent>
-          <CardFooter className="p-0 flex gap-2  min-[650px]:mt-6 max-md:flex-col max-md:items-start">
+          <CardFooter className="p-0 flex gap-2  min-md:mt-6 max-md:flex-col max-md:items-start">
             {/* <Button className="rounded-none drop-shadow-xl/70">
               Download CV
             </Button> */}
@@ -64,11 +63,10 @@ export default function CardProfile() {
               variant={"outline"}
               className="rounded-none w-32 border-2 border-black bg-white text-black px-6 py-2 font-semibold flex items-center gap-2 shadow-[3px_3px_0px_black] hover:translate-x-[1px] hover:translate-y-[1px] duration-150 active:shadow-none active:translate-x-[2px] active:translate-y-[2px]"
             >
-              Contact Me
+              <a href="#contact">Contact Me</a>
             </Button>
           </CardFooter>
         </div>
-        
       </main>
     </Card>
   );

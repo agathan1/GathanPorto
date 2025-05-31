@@ -16,6 +16,7 @@ import {
   Waypoints,
   MessageSquareMore,
 } from "lucide-react";
+import { BotnavTrial } from "./BotnavTrial";
 
 const icons = [
   {
@@ -109,9 +110,6 @@ export default function NavBar() {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
-
-  console.log(activeSection);
-
   return (
     <nav>
       {!isMobile && (
@@ -124,7 +122,7 @@ export default function NavBar() {
           <MenubarMenu>
             {icons.map((icon, index) => (
               <MenubarTrigger
-                className="w-full flex justify-center hover:bg-muted gap-1 font-poppins hover:bg-slate-100/10"
+                className="w-full flex justify-center gap-1 font-poppins hover:bg-slate-100/10"
                 key={index}
               >
                 <a href={icon.direct}>{icon.name}</a>
@@ -135,48 +133,53 @@ export default function NavBar() {
         </Menubar>
       )}
       {isMobile && (
-        <Menubar
-          className="fixed bottom-4 left-1/2 -translate-x-1/2 w-[90%] max-w-md bg-[#577399] shadow-lg rounded-2xl flex justify-around py-6 px-4 z-50"
-          //   className={`${
-          //     scrolled ? "bg-[#EFE9E1] drop-shadow-2xl" : "bg-transparent"
-          //   } rounded-2xl max-w-md mx-auto fixed bottom-8 left-0 right-0 transition-colors duration-300 z-50`}
-        >
-          {/* <Menubar className="fixed top-5 w-[50%] left-1/2 -translate-x-1/2 max-[750px]:w-[70%]"> */}
-          <MenubarMenu>
-            {icons.map((icon) => {
-             const isActive = icon.direct === activeSection;
-            //  const isActive = activeHash === icon.direct;
-            //  const isActive = location.pathname === icon.direct;
-             console.log(activeSection);
-             console.log(isActive);
-
-              return (
-                <MenubarTrigger
-                  className="w-full flex justify-center gap-1 font-poppins hover:bg-slate-100/10"
-                  key={icon.name}
-                >
-                  {/* {icon.name} */}
-                  {/* <a href={icon.direct} target="_blank"> */}
-                  <a
-                    href={icon.direct}
-                    className={`flex flex-col items-center justify-center p-2 rounded-md transition-colors duration-300
-          ${
-            isActive
-              ? "text-blue-600"
-              : "text-[#f7f7ff]"
-          }`}
-                    // className={`bg-red-400 active:bg-blue-500 ${
-                    //   icon.name === icon.name ? "text-white" : "text-black"
-                    // }`}
-                  >
-                    <icon.icon size={22} />
-                  </a>
-                </MenubarTrigger>
-              );
-            })}
-          </MenubarMenu>
-        </Menubar>
+        <div className="fixed bottom-8 left-1/2 -translate-x-1/2 flex z-50">
+          <BotnavTrial />
+        </div>
       )}
     </nav>
   );
 }
+
+
+//  <Menubar
+//           className="fixed bottom-4 left-1/2 -translate-x-1/2 w-[90%] max-w-md bg-[#577399] shadow-lg rounded-2xl flex justify-around py-6 px-4 z-50"
+//           //   className={`${
+//           //     scrolled ? "bg-[#EFE9E1] drop-shadow-2xl" : "bg-transparent"
+//           //   } rounded-2xl max-w-md mx-auto fixed bottom-8 left-0 right-0 transition-colors duration-300 z-50`}
+//         >
+//           {/* <Menubar className="fixed top-5 w-[50%] left-1/2 -translate-x-1/2 max-[750px]:w-[70%]"> */}
+//           <MenubarMenu>
+//             {icons.map((icon) => {
+//              const isActive = icon.direct === activeSection;
+//             //  const isActive = activeHash === icon.direct;
+//             //  const isActive = location.pathname === icon.direct;
+//              console.log(activeSection);
+//              console.log(isActive);
+
+//               return (
+//                 <MenubarTrigger
+//                   className="w-full flex justify-center gap-1 font-poppins hover:bg-slate-100/10"
+//                   key={icon.name}
+//                 >
+//                   {/* {icon.name} */}
+//                   {/* <a href={icon.direct} target="_blank"> */}
+//                   <a
+//                     href={icon.direct}
+//                     className={`flex flex-col items-center justify-center p-2 rounded-md transition-colors duration-300
+//           ${
+//             isActive
+//               ? "text-blue-600"
+//               : "text-[#f7f7ff]"
+//           }`}
+//                     // className={`bg-red-400 active:bg-blue-500 ${
+//                     //   icon.name === icon.name ? "text-white" : "text-black"
+//                     // }`}
+//                   >
+//                     <icon.icon size={22} />
+//                   </a>
+//                 </MenubarTrigger>
+//               );
+//             })}
+//           </MenubarMenu>
+//         </Menubar>
