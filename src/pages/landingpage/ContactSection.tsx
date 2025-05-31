@@ -77,7 +77,6 @@ export const CardContent = ({
 };
 
 export default function ContactSection() {
-  console.log("contact", contact);
   return (
     <>
       <div className="border-b-2 border-dashed border-black pb-8">
@@ -89,12 +88,13 @@ export default function ContactSection() {
       <section className="space-y-8">
         <div className="grid grid-cols-2 max-md:grid-cols-1 mt-8 gap-8">
           {contact.map((item, index) => {
-            let color: "black" | "purple-300/50" | "blue-300/10"
+            let color: "black" | "purple-300/50" | "blue-300/10";
 
             if (item.name === "Instagram") color = "purple-300/50";
             else if (item.name === "LinkedIn") color = "blue-300/10";
             return (
               <CardContent
+                key={index}
                 main={item.message}
                 header={item.name}
                 button={item.button}

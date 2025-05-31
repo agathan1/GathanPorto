@@ -21,7 +21,6 @@ interface Props {
 export const CardProject = ({
   description,
   tech_stack,
-  is_lounched,
   title,
   the_link,
   image,

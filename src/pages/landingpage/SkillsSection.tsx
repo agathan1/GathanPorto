@@ -3,7 +3,6 @@ import { CodeXml } from "lucide-react";
 import { Skill } from "@/lib/dataDummy";
 
 export default function SkillsSection() {
-  console.log("skill", Skill);
   return (
     <>
       <div className=" font-poppins text-black border-b-2 border-dashed border-black pb-6">

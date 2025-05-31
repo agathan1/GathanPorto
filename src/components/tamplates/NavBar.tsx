@@ -4,7 +4,6 @@ import {
   MenubarMenu,
   MenubarTrigger,
 } from "@/components/ui/menubar";
-import { useLocation } from "react-router-dom";
 import {
   Code,
   Home,
@@ -37,7 +36,6 @@ const icons = [
 ];
 
 export default function NavBar() {
-  const location = useLocation();
   const [scrolled, setScrolled] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const [activeSection, setActiveSection] = useState<string>("");

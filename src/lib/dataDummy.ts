@@ -1,6 +1,6 @@
 import {
   LogosReactQuery,
-  ReactIcon,
+  MaterialIconThemeReact,
   OdooIcon,
   HtmlIcon,
   TypescriptIcon,
@@ -73,7 +73,7 @@ export const contact = [
 export const Skill = [
   {
     name: "React",
-    icon: ReactIcon,
+    icon: MaterialIconThemeReact,
   },
   {
     name: "Typescript",

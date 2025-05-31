@@ -4,12 +4,12 @@ import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Button } from "../ui/button";
 
-interface FormInput {
-  [key: string]: string;
-  email: string,
-  username: string,
-  message: string
-}
+// interface FormInput {
+//   [key: string]: string;
+//   email: string,
+//   username: string,
+//   message: string
+// }
 export default function FormContact() {
   // const [isForm, setIsForm] = useState<FormInput>({
   //   email: "",
@@ -23,7 +23,7 @@ export default function FormContact() {
     <Card className=" p-8 border-black border-2 bg-[#bdd5ea]/30 shadow-[8px_8px_0px_black] rounded-none">
       <form onSubmit={handleSubmit}>
         {["email", "username", "message"].map((field, index) => (
-          <div className="space-y-2">
+          <div key={index} className="space-y-2">
             <Label htmlFor={field} className="mb-4">
               {field === "email"
                 ? "Email"

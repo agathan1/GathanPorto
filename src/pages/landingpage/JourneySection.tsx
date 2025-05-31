@@ -16,8 +16,8 @@ export default function JourneySection() {
         </p>
       </div>
       <div className="mt-8 border-y-10 border-dashed py-8 border-black">
-        {Pengalaman.map((item) => (
-          <Card className=" bg-transparent border-none shadow-none p-0 mb-8">
+        {Pengalaman.map((item, index) => (
+          <Card key={index} className=" bg-transparent border-none shadow-none p-0 mb-8">
             <Card className="border-2 bg-[#bdd5ea]/30 border-black shadow-[5px_5px_0px_black] hover:translate-x-[1px] hover:translate-y-[1px] duration-150 hover:shadow-none">
               <CardHeader className="font-poppins">
                 <h2 className="text-base font-bold bg-black text-white p-2 w-fit">
@@ -34,8 +34,8 @@ export default function JourneySection() {
               </CardContent>
               <CardFooter className="font-poppins max-md:flex-col max-md:items-start gap-3 text-[12px] w-fit">
                 <section className="flex gap-2 flex-wrap">
-                  {item.stack.map((item) => (
-                    <p className="border-2 border-black p-1 rounded-[5px]">
+                  {item.stack.map((item, index) => (
+                    <p key={index} className="border-2 border-black p-1 rounded-[5px]">
                       {item}
                     </p>
                   ))}

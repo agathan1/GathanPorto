@@ -1,6 +1,6 @@
 export {default as LogosReactQuery} from './LogosReactQuery'
 export {default as GithubIcon} from './GithubIcon'
-export {default as ReactIcon} from './MaterialIconThemeReact'
+export {default as MaterialIconThemeReact} from './MaterialIconThemeReact'
 export {default as JavaScriptIcon} from './JavaScriptIcon'
 export {default as OdooIcon} from './OdooIcon'
 export {default as HtmlIcon} from './HtmlIcon'

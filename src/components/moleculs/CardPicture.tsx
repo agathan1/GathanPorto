@@ -1,11 +1,8 @@
-import React from "react";
-import { Card } from "../ui/card";
-
 interface Props {
   image: string;
 }
 
-export default function CardPicture({image}: Props) {
+export default function CardPicture({ image }: Props) {
   return (
     <>
       <div className="size-68 max-md:size-48 origin-top-left min-md:rotate-[7deg] rotate-[2deg] bg-white border-3 border-black">
