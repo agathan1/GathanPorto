@@ -1,6 +1,7 @@
 "use client";
 
-import React, { ReactNode, useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
+import type { ReactNode } from "react";
 
 export interface BaseParticle {
   element: HTMLElement | SVGSVGElement;
@@ -30,7 +31,7 @@ export interface CoolParticleOptions extends BaseParticleOptions {
 
 const getContainer = () => {
   const id = "_coolMode_effect";
-  let existingContainer = document.getElementById(id);
+  const existingContainer = document.getElementById(id);
 
   if (existingContainer) {
     return existingContainer;

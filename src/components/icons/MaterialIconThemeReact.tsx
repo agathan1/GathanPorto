@@ -1,4 +1,6 @@
-export default function MaterialIconThemeReact(props) {
+import type { SVGProps } from 'react';
+
+export default function MaterialIconThemeReact(props: SVGProps<SVGSVGElement>) {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" {...props}>
       <path
