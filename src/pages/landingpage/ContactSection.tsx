@@ -88,10 +88,11 @@ export default function ContactSection() {
       <section className="space-y-8">
         <div className="grid grid-cols-2 max-md:grid-cols-1 mt-8 gap-8">
           {contact.map((item, index) => {
-            let color: "black" | "purple-300/50" | "blue-300/10";
+            let color: "black" | "purple-300/50" | "blue-300/10" = "black";
 
             if (item.name === "Instagram") color = "purple-300/50";
             else if (item.name === "LinkedIn") color = "blue-300/10";
+            // else color = "black";
             return (
               <CardContent
                 key={index}
