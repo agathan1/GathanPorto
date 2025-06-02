@@ -1,7 +1,9 @@
 import { useForm, ValidationError } from "@formspree/react";
 
+
 export default function MailForm() {
-  const [state, handleSubmit] = useForm("xblovaek");
+  const [state, handleSubmit] = useForm(import.meta.env.VITE_KEY_MAILER);
+  // const [state, handleSubmit] = useForm("xblovaek");
   if (state.succeeded) {
     return <p>Thanks for joining!</p>;
   }

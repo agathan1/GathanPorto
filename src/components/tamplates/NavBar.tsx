@@ -38,38 +38,41 @@ const icons = [
 export default function NavBar() {
   const [scrolled, setScrolled] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
-  const [activeSection, setActiveSection] = useState<string>("");
+  
+  // const [activeSection, setActiveSection] = useState<string>("");
   // const [activeHash, setActiveHash] = useState<string>(window.location.hash);
 
-  useEffect(() => {
-    const sections = icons.map((icon) =>
-      document.querySelector(icon.direct)
-    ) as HTMLElement[];
+  // ====== CODE NAVBAR UP TO WORK ======
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActiveSection(`#${entry.target.id}`);
-          }
-        });
-      },
-      {
-        rootMargin: "-50% 0px -50% 0px", // agar aktif saat tengah layar
-        threshold: 0.1,
-      }
-    );
+  // useEffect(() => {
+  //   const sections = icons.map((icon) =>
+  //     document.querySelector(icon.direct)
+  //   ) as HTMLElement[];
 
-    sections.forEach((section) => {
-      if (section) observer.observe(section);
-    });
+  //   const observer = new IntersectionObserver(
+  //     (entries) => {
+  //       entries.forEach((entry) => {
+  //         if (entry.isIntersecting) {
+  //           setActiveSection(`#${entry.target.id}`);
+  //         }
+  //       });
+  //     },
+  //     {
+  //       rootMargin: "-50% 0px -50% 0px", // agar aktif saat tengah layar
+  //       threshold: 0.1,
+  //     }
+  //   );
 
-    return () => {
-      sections.forEach((section) => {
-        if (section) observer.unobserve(section);
-      });
-    };
-  }, [icons]);
+  //   sections.forEach((section) => {
+  //     if (section) observer.observe(section);
+  //   });
+
+  //   return () => {
+  //     sections.forEach((section) => {
+  //       if (section) observer.unobserve(section);
+  //     });
+  //   };
+  // }, [icons]);
 
   useEffect(() => {
     const handleScroll = () => {
